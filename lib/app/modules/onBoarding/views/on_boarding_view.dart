@@ -35,7 +35,7 @@ class OnBoardingView extends GetView<OnBoardingController> {
             child: Obx(
               () => controller.currentPage.value==controller.onBoarding.length - 1
                   ? ElevatedButton(
-                      onPressed: () => controller.nextPage(),
+                      onPressed: () => controller.onBoardingDone(),
                       child: const Text('Get Started'),
                     )
                   : Row(

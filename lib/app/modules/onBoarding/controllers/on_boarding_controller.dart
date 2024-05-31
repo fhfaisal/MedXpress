@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:medxpress/app/modules/onBoarding/widgets/on_boarding.dart';
+import 'package:medxpress/app/routes/app_pages.dart';
 import 'package:medxpress/app/utils/constants/image_strings.dart';
 
 class OnBoardingController extends GetxController {
@@ -44,5 +45,10 @@ class OnBoardingController extends GetxController {
     currentPage.value = onBoarding.length - 1;
     pageController.jumpToPage(onBoarding.length - 1);
   }
-
+  navigateToLogin(){
+    Get.toNamed(Routes.LOGIN);
+  }
+  onBoardingDone(){
+    navigateToLogin();
+  }
 }
