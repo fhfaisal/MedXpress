@@ -14,6 +14,9 @@ class LanguageTranslations extends Translations {
           'onBoarding3Subtitle':"Simplify your health routine with convenient prescription deliveries.",
           'onBoarding4Title':"Welcome to Medxpress",
           'onBoarding4Subtitle':"Do you want some help with your health to get better life?",
+          'GetStarted':"Get Started",
+          'Next':"Next",
+          'Skip':"Skip",
           ///Login Page
           '':"",
         },

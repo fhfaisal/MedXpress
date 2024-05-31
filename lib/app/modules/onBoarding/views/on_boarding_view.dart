@@ -36,21 +36,21 @@ class OnBoardingView extends GetView<OnBoardingController> {
               () => controller.currentPage.value==controller.onBoarding.length - 1
                   ? ElevatedButton(
                       onPressed: () => controller.onBoardingDone(),
-                      child: const Text('Get Started'),
+                      child: Text('GetStarted'.tr),
                     )
                   : Row(
                       children: [
                         Expanded(
                           child: ElevatedButton(
                             onPressed: () => controller.skipPage(),
-                            child: const Text('SKIP'),
+                            child: Text('Skip'.tr),
                           ),
                         ),
                         const SizedBox(width: AppSizes.spaceBtwItems),
                         Expanded(
                           child: OutlinedButton(
                             onPressed: () => controller.nextPage(),
-                            child: const Text('Next'),
+                            child: Text('Next'.tr),
                           ),
                         ),
                       ],

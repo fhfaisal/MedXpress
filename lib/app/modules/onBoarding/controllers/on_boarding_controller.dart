@@ -46,7 +46,7 @@ class OnBoardingController extends GetxController {
     pageController.jumpToPage(onBoarding.length - 1);
   }
   navigateToLogin(){
-    Get.toNamed(Routes.LOGIN);
+    Get.offAllNamed(Routes.LOGIN);
   }
   onBoardingDone(){
     navigateToLogin();
