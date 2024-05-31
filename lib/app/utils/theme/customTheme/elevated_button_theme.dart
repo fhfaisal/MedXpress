@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+import 'package:medxpress/app/utils/constants/colors.dart';
+
+class AppElevatedButtonTheme {
+  AppElevatedButtonTheme._(); //To avoid creating instances
+
+  ///Light Theme
+  static final lightElevatedButtonTheme = ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      elevation: 0,
+      foregroundColor: Colors.white,
+      backgroundColor: AppColors.primary,
+      disabledForegroundColor: Colors.grey,
+      disabledBackgroundColor: Colors.transparent,
+      //side: const BorderSide(color: AppColors.primary),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      textStyle: const TextStyle(fontSize: 16, color: AppColors.white, fontWeight: FontWeight.w600),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+    ),
+  );
+
+  ///DorkTheme
+  static final darkElevatedButtonTheme = ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+    elevation: 0,
+    foregroundColor: Colors.white,
+    backgroundColor: AppColors.primary,
+    disabledForegroundColor: Colors.grey,
+    disabledBackgroundColor: Colors.transparent,
+    //side: const BorderSide(color: AppColors.primary),
+    padding: const EdgeInsets.symmetric(horizontal: 20),
+    textStyle: const TextStyle(fontSize: 16, color: AppColors.white, fontWeight: FontWeight.w600),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+  ));
+}
