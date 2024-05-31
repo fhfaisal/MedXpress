@@ -23,52 +23,41 @@ class OnBoardingView extends GetView<OnBoardingController> {
       children: [
         PageView(
           controller: controller.pageController,
-          onPageChanged: (value) => controller.updatePageIndicator,
-          children: [
-            OnBoarding(
-              image: AppImageStrings.onBoarding1,
-              title: 'onBoarding1Title'.tr,
-              subtitle: 'onBoarding1Subtitle'.tr,
-            ),
-            OnBoarding(
-              image: AppImageStrings.onBoarding2,
-              title: 'onBoarding2Title'.tr,
-              subtitle: 'onBoarding2Subtitle'.tr,
-            ),
-            OnBoarding(
-              image: AppImageStrings.onBoarding3,
-              title: 'onBoarding3Title'.tr,
-              subtitle: 'onBoarding3Subtitle'.tr,
-            ),
-            OnBoarding(
-              image: AppImageStrings.onBoarding4,
-              title: 'onBoarding4Title'.tr,
-              subtitle: 'onBoarding4Subtitle'.tr,
-            ),
-          ],
+          onPageChanged: (value) => controller.updatePageIndicator(value),
+          children: controller.onBoarding,
         ),
         Positioned(
-            bottom: AppDeviceUtility.getAppBarHeight() + AppDeviceUtility.getAppBarHeight(),
-            left: 0, //AppSizes.defaultSpace,
-            right: 0, //AppSizes.defaultSpace,
-            child: Obx(() => Padding(
-              padding: const EdgeInsets.symmetric(horizontal: AppSizes.spaceBtwItems),
-              child: controller.currentPage.value==3?
-             Obx(() => Row(
-               children: [
-                 Expanded(child: ElevatedButton(onPressed: () => controller.skipPage(), child: const Text('SKIP'))),
-                 const SizedBox(
-                   width: AppSizes.spaceBtwItems,
-                 ),
-                 Expanded(
-                     child: OutlinedButton(
-                         onPressed: () => controller.nextPage(),
-                         child: const Text('Next'))),
-               ],
-             )): OutlinedButton(
-                  onPressed: () => controller.nextPage(),
-                  child: const Text('Get Started')),
-            ))),
+          bottom: AppDeviceUtility.getAppBarHeight() + AppDeviceUtility.getAppBarHeight(),
+          left: 0,
+          right: 0,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: AppSizes.spaceBtwItems),
+            child: Obx(
+              () => controller.currentPage.value==controller.onBoarding.length - 1
+                  ? ElevatedButton(
+                      onPressed: () => controller.nextPage(),
+                      child: const Text('Get Started'),
+                    )
+                  : Row(
+                      children: [
+                        Expanded(
+                          child: ElevatedButton(
+                            onPressed: () => controller.skipPage(),
+                            child: const Text('SKIP'),
+                          ),
+                        ),
+                        const SizedBox(width: AppSizes.spaceBtwItems),
+                        Expanded(
+                          child: OutlinedButton(
+                            onPressed: () => controller.nextPage(),
+                            child: const Text('Next'),
+                          ),
+                        ),
+                      ],
+                    ),
+            ),
+          ),
+        ),
         Positioned(
             bottom: AppSizes.appBarHeight,
             left: 0,
