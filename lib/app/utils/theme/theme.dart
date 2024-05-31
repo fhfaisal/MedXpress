@@ -19,7 +19,7 @@ class AppTheme {
     useMaterial3: true,
     fontFamily: 'Poppins',
     brightness: Brightness.light,
-    primaryColor: Colors.blue,
+    primaryColor: AppColors.primary,
     scaffoldBackgroundColor: Colors.white,
     textTheme: AppTextTheme.lightTextTheme,
     elevatedButtonTheme: AppElevatedButtonTheme.lightElevatedButtonTheme,

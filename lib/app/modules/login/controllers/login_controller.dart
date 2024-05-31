@@ -1,23 +1,19 @@
 import 'package:get/get.dart';
+import 'package:medxpress/app/routes/app_pages.dart';
 
 class LoginController extends GetxController {
-  //TODO: Implement LoginController
+  RxBool remember = true.obs;
+  RxBool obSecure = true.obs;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  navigateToForgot() {
+    Get.toNamed(Routes.FORGOT_PASSWORD);
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  navigateToSignUp() {
+    Get.toNamed(Routes.SIGN_UP);
   }
 
-  @override
-  void onClose() {
-    super.onClose();
+  navigateToHome() {
+    Get.offAllNamed(Routes.HOME);
   }
-
-  void increment() => count.value++;
 }

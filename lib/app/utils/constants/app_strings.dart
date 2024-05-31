@@ -18,7 +18,16 @@ class LanguageTranslations extends Translations {
           'Next':"Next",
           'Skip':"Skip",
           ///Login Page
-          '':"",
+          'LoginYourAccount':"Login Your Account",
+          'Email':"Email",
+          'EnterYourEmail':"Enter your email",
+          'Password':"Password",
+          'EnterYourPassword':"Enter your password",
+          'RememberMe':"Remember me",
+          'ForgotPassword?':"Forgot Password?",
+          'Login':"Login",
+          'SignUp':"SignUp",
+          'DontHaveAnAccount?':"Don’t Have an Account?",
         },
         'bn_BD': {}
       };

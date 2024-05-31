@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medxpress/app/utils/constants/colors.dart';
 
 class AppCheckboxTheme {
   AppCheckboxTheme._(); // To avoid creating instances
@@ -16,7 +17,7 @@ class AppCheckboxTheme {
     }),
     fillColor: MaterialStateProperty.resolveWith((states) {
       if (states.contains(MaterialState.selected)) {
-        return Colors.blue;
+        return AppColors.primary;
       } else {
         return Colors.transparent;
       }
