@@ -8,6 +8,8 @@ import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/onBoarding/bindings/on_boarding_binding.dart';
 import '../modules/onBoarding/views/on_boarding_view.dart';
+import '../modules/otpVerification/bindings/otp_verification_binding.dart';
+import '../modules/otpVerification/views/otp_verification_view.dart';
 import '../modules/signUp/bindings/sign_up_binding.dart';
 import '../modules/signUp/views/sign_up_view.dart';
 
@@ -20,29 +22,40 @@ class AppPages {
 
   static final routes = [
     GetPage(
-      name: _Paths.HOME,
-      page: () => const HomeView(),
-      binding: HomeBinding(),
-    ),
+        name: _Paths.HOME,
+        page: () => const HomeView(),
+        binding: HomeBinding(),
+        transition: Transition.fadeIn,
+        transitionDuration: const Duration(milliseconds: 500)),
     GetPage(
-      name: _Paths.ON_BOARDING,
-      page: () => const OnBoardingView(),
-      binding: OnBoardingBinding(),
-    ),
+        name: _Paths.ON_BOARDING,
+        page: () => const OnBoardingView(),
+        binding: OnBoardingBinding(),
+        transition: Transition.fadeIn,
+        transitionDuration: const Duration(milliseconds: 500)),
     GetPage(
-      name: _Paths.LOGIN,
-      page: () => const LoginView(),
-      binding: LoginBinding(),
-    ),
+        name: _Paths.LOGIN,
+        page: () => const LoginView(),
+        binding: LoginBinding(),
+        transition: Transition.fadeIn,
+        transitionDuration: const Duration(milliseconds: 500)),
     GetPage(
-      name: _Paths.SIGN_UP,
-      page: () => const SignUpView(),
-      binding: SignUpBinding(),
-    ),
+        name: _Paths.SIGN_UP,
+        page: () => const SignUpView(),
+        binding: SignUpBinding(),
+        transition: Transition.fadeIn,
+        transitionDuration: const Duration(milliseconds: 500)),
     GetPage(
-      name: _Paths.FORGOT_PASSWORD,
-      page: () => const ForgotPasswordView(),
-      binding: ForgotPasswordBinding(),
-    ),
+        name: _Paths.FORGOT_PASSWORD,
+        page: () => const ForgotPasswordView(),
+        binding: ForgotPasswordBinding(),
+        transition: Transition.fadeIn,
+        transitionDuration: const Duration(milliseconds: 500)),
+    GetPage(
+        name: _Paths.OTP_VERIFICATION,
+        page: () => const OtpVerificationView(),
+        binding: OtpVerificationBinding(),
+        transition: Transition.fadeIn,
+        transitionDuration: const Duration(milliseconds: 500)),
   ];
 }

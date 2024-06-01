@@ -26,8 +26,8 @@ class LanguageTranslations extends Translations {
           'RememberMe':"Remember me",
           'ForgotPassword?':"Forgot Password?",
           'Login':"Login",
-          'SignUp':"SignUp",
-          'DontHaveAnAccount?':"Don’t Have an Account?",
+          'SignUp':"Sign Up",
+          'DontHaveAnAccount':"Don’t Have an Account?",
         },
         'bn_BD': {}
       };

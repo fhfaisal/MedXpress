@@ -12,10 +12,10 @@ class AppTextFormFieldTheme {
 
 // constraints: const BoxConstraints.expand(height: 14.inputFieldHeight),
       labelStyle: const TextStyle().copyWith(fontSize: 14, color: AppColors.tertiaryText),
-      hintStyle: const TextStyle().copyWith(fontSize: 14, color: AppColors.tertiaryText),
+      hintStyle: const TextStyle().copyWith(fontSize: 14,fontWeight: FontWeight.w400, color: AppColors.tertiaryText),
       errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
       floatingLabelStyle: const TextStyle().copyWith(color: AppColors.textPrimary),
-      contentPadding: const EdgeInsets.symmetric(horizontal: 25),
+      contentPadding: const EdgeInsets.only(left: 25),
       border: const OutlineInputBorder().copyWith(
         borderRadius: BorderRadius.circular(14),
         borderSide: const BorderSide(width: 1, color: Colors.grey),

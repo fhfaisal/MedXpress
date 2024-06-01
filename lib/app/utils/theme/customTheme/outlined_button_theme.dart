@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medxpress/app/utils/constants/colors.dart';
+import 'package:medxpress/app/utils/constants/sizes.dart';
 import 'package:medxpress/app/utils/helpers/helper_function.dart';
 
 class AppOutlinedButtonTheme {
@@ -9,6 +10,7 @@ class AppOutlinedButtonTheme {
   static final lightOutlinedButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       elevation: 1,
+      fixedSize: const Size.fromHeight(AppSizes.buttonHeight),
       foregroundColor:AppColors.primary,
       backgroundColor: Colors.transparent,
       disabledForegroundColor: Colors.grey,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medxpress/app/utils/constants/colors.dart';
+import 'package:medxpress/app/utils/constants/sizes.dart';
 
 class AppElevatedButtonTheme {
   AppElevatedButtonTheme._(); //To avoid creating instances
@@ -8,6 +9,7 @@ class AppElevatedButtonTheme {
   static final lightElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       elevation: 0,
+      fixedSize: const Size.fromHeight(AppSizes.buttonHeight),
       foregroundColor: Colors.white,
       backgroundColor: AppColors.primary,
       disabledForegroundColor: Colors.grey,

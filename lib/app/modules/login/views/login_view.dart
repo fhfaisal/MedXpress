@@ -1,19 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
+import 'package:medxpress/app/common/widgets/background_stack.dart';
+import 'package:medxpress/app/modules/login/views/login_view.dart';
 import 'package:medxpress/app/utils/constants/colors.dart';
 import 'package:medxpress/app/utils/constants/icon_constants.dart';
-import 'package:medxpress/app/utils/constants/image_strings.dart';
 import 'package:medxpress/app/utils/constants/sizes.dart';
 import 'package:medxpress/app/utils/helpers/helper_function.dart';
 
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
-  const LoginView({Key? key}) : super(key: key);
+  const LoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -161,47 +160,3 @@ class SocialMediaLoginSection extends StatelessWidget {
   }
 }
 
-class BackgroundStack extends StatelessWidget {
-  const BackgroundStack({super.key, this.headline});
-
-  final String? headline;
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      fit: StackFit.expand,
-      children: [
-        Container(
-          margin: const EdgeInsets.all(AppSizes.defaultSpace),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(height: AppSizes.appBarHeight),
-              Image(
-                image: const AssetImage(AppImageStrings.fullLogo),
-                fit: BoxFit.cover,
-                width: AppHelperFunction.screenWidth() / 2,
-              ),
-              const SizedBox(height: AppSizes.spaceBtwItems),
-              Text(
-                headline ?? '',
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
-              const SizedBox(height: AppSizes.spaceBtwItems),
-            ],
-          ),
-        ),
-        Positioned(
-            top: 0,
-            right: -20,
-            child: Image(
-              image: const AssetImage(AppImageStrings.backgroundLogo),
-              fit: BoxFit.fitHeight,
-              width: AppHelperFunction.screenWidth() / 1.5,
-              height: AppHelperFunction.screenWidth() / 1.5,
-            )),
-      ],
-    );
-  }
-}

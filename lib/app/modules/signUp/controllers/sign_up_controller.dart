@@ -1,23 +1,26 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
+import 'package:medxpress/app/routes/app_pages.dart';
 
 class SignUpController extends GetxController {
-  //TODO: Implement SignUpController
+  RxBool remember = true.obs;
+  RxBool obSecure = true.obs;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  final TextEditingController dobController = TextEditingController();
+  String selectedGender='Male';
+  final List<String> genders = ['Male', 'Female', 'Other'];
+
+  navigateToForgot() {
+    Get.toNamed(Routes.FORGOT_PASSWORD);
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  navigateToLogin() {
+    Get.toNamed(Routes.LOGIN);
   }
 
-  @override
-  void onClose() {
-    super.onClose();
+  navigateToOTP() {
+    Get.toNamed(Routes.OTP_VERIFICATION);
   }
-
-  void increment() => count.value++;
 }

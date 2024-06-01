@@ -24,7 +24,7 @@ class AppSizes {
   static const double paddingXXl = 14.0;
 
 // Button sizes
-  static const double buttonHeight = 18;
+  static const double buttonHeight = 52;
   static const double buttonRadius = 12.0;
   static const double buttonWidth = 12.0;
   static const double buttonElevation = 4.0;
@@ -55,7 +55,8 @@ class AppSizes {
 
 // Input field
   static const double inputFieldRadius = 12.0;
-  static const double spaceBtwInputFields =16.0 ;
+  static const double spaceBtwInputFields =12.0 ;
+  static const double spaceBtwInputFieldsSm =6.0 ;
 
 // Card sizes
   static const double cardRadiusLg =16.0;
