@@ -1,5 +1,8 @@
+import 'dart:ffi';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'package:get/get.dart';
 import 'package:medxpress/app/common/widgets/background_stack.dart';
@@ -92,16 +95,71 @@ class OtpVerificationView extends GetView<OtpVerificationController> {
                         const SizedBox(height: AppSizes.defaultSpace),
                         SizedBox(
                           width: AppHelperFunction.screenWidth(),
-                          child: ElevatedButton(
-                            onPressed: () => null,
-                            child: const Text('Submit'),
-                          ),
-                        )
+                          child:ElevatedButton(
+                            onPressed: () => controller.navigateToOTPResponse(),
+                            child:const Text('Verify'),
+                          )
+                        ),
+                        const SizedBox(height: AppSizes.spaceBtwItems),
+                        ResendOTPSection(controller: controller),
                       ],
                     )),
               ],
             )),
       ],
     ));
+  }
+}
+
+class ResendOTPSection extends StatelessWidget {
+  const ResendOTPSection({
+    super.key,
+    required this.controller,
+  });
+
+  final OtpVerificationController controller;
+
+  @override
+  Widget build(BuildContext context) {
+    return GetBuilder<OtpVerificationController>(
+      builder: (_) {
+        return Column(
+          children: [
+             Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                controller.showResendButton?
+                Container(
+                  height: AppSizes.buttonHeightMd,
+                  padding: const EdgeInsets.symmetric(horizontal: AppSizes.paddingXXl),
+                  decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor.withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(AppSizes.borderRadiusLg)
+                  ),
+                  child: GestureDetector(
+                    onTap: () {
+                      // Add your resend OTP logic here
+                      controller.startTimer();
+                    },
+                    child: Center(child: Text('Resend',style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Theme.of(context).primaryColor),)),
+                  ),
+                ):
+                Row(
+                  children: [
+                    Text('Resend',style: Theme.of(context).textTheme.titleMedium,),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: AppSizes.xs),
+                      child: Icon(CupertinoIcons.stopwatch_fill,color: AppColors.primary,),
+                    ),
+                    Text("${controller.start.toString()}s",style: Theme.of(context).textTheme.titleLarge,),
+                  ],
+                ),
+              ],
+            ),
+
+          ],
+        );
+      },
+    );
   }
 }
