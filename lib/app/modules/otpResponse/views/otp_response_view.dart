@@ -75,7 +75,7 @@ class OtpResponseView extends GetView<OtpResponseController> {
         const SizedBox(height: AppSizes.spaceBtwSections),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: AppSizes.defaultSpace),
-          child: ElevatedButton(onPressed: () => null, child: const Text('Continue')),
+          child: ElevatedButton(onPressed: () => controller.navigateToHome(), child: const Text('Continue')),
         )
       ],
     ));
