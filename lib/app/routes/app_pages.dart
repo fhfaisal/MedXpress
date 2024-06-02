@@ -8,6 +8,8 @@ import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/onBoarding/bindings/on_boarding_binding.dart';
 import '../modules/onBoarding/views/on_boarding_view.dart';
+import '../modules/otpResponse/bindings/otp_response_binding.dart';
+import '../modules/otpResponse/views/otp_response_view.dart';
 import '../modules/otpVerification/bindings/otp_verification_binding.dart';
 import '../modules/otpVerification/views/otp_verification_view.dart';
 import '../modules/signUp/bindings/sign_up_binding.dart';
@@ -56,6 +58,12 @@ class AppPages {
         page: () => const OtpVerificationView(),
         binding: OtpVerificationBinding(),
         transition: Transition.fadeIn,
+        transitionDuration: const Duration(milliseconds: 500)),
+    GetPage(
+        name: _Paths.OTP_RESPONSE,
+        page: () => const OtpResponseView(),
+        binding: OtpResponseBinding(),
+        transition: Transition.zoom,
         transitionDuration: const Duration(milliseconds: 500)),
   ];
 }

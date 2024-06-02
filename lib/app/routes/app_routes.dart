@@ -9,6 +9,7 @@ abstract class Routes {
   static const SIGN_UP = _Paths.SIGN_UP;
   static const FORGOT_PASSWORD = _Paths.FORGOT_PASSWORD;
   static const OTP_VERIFICATION = _Paths.OTP_VERIFICATION;
+  static const OTP_RESPONSE = _Paths.OTP_RESPONSE;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const SIGN_UP = '/sign-up';
   static const FORGOT_PASSWORD = '/forgot-password';
   static const OTP_VERIFICATION = '/otp-verification';
+  static const OTP_RESPONSE = '/otp-response';
 }

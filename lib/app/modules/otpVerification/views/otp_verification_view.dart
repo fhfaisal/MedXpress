@@ -47,63 +47,60 @@ class OtpVerificationView extends GetView<OtpVerificationController> {
                 const SizedBox(height: AppSizes.spaceBtwItems),
                 SingleChildScrollView(
                     child: Column(
-                      children: [
-                        Form(
-                          key: controller.formKey,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Directionality(
-                                // Specify direction if desired
-                                textDirection: TextDirection.ltr,
-                                child: Pinput(
-                                  length: 4,
-                                  controller: controller.pinController,
-                                  focusNode: controller.focusNode,
-                                  androidSmsAutofillMethod: AndroidSmsAutofillMethod.smsUserConsentApi,
-                                  listenForMultipleSmsOnAndroid: true,
-                                  defaultPinTheme: defaultPinTheme.copyWith(
-                                    decoration: defaultPinTheme.decoration!.copyWith(
-                                        borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius),
-                                        border: Border.all(color: AppColors.primary.withOpacity(0.15)),
-                                        color: AppColors.primary10),
-                                  ),
-                                  focusedPinTheme: defaultPinTheme.copyWith(
-                                    decoration: defaultPinTheme.decoration!.copyWith(
-                                      borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius),
-                                      border: Border.all(color: AppColors.primary),
-                                    ),
-                                  ),
-                                  submittedPinTheme: defaultPinTheme.copyWith(
-                                    decoration: defaultPinTheme.decoration!.copyWith(
-                                      color: AppColors.primary10,
-                                      border: Border.all(color: AppColors.primary),
-                                    ),
-                                  ),
-                                  errorPinTheme: defaultPinTheme.copyWith(
-
-                                    decoration: defaultPinTheme.decoration!.copyWith(
-                                      color: AppColors.error,
-                                      border: Border.all(color: AppColors.error),
-                                    )
-                                  ),
+                  children: [
+                    Form(
+                      key: controller.formKey,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Directionality(
+                            // Specify direction if desired
+                            textDirection: TextDirection.ltr,
+                            child: Pinput(
+                              length: 4,
+                              controller: controller.pinController,
+                              focusNode: controller.focusNode,
+                              androidSmsAutofillMethod: AndroidSmsAutofillMethod.smsUserConsentApi,
+                              listenForMultipleSmsOnAndroid: true,
+                              defaultPinTheme: defaultPinTheme.copyWith(
+                                decoration: defaultPinTheme.decoration!.copyWith(
+                                    borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius),
+                                    border: Border.all(color: AppColors.primary.withOpacity(0.15)),
+                                    color: AppColors.primary10),
+                              ),
+                              focusedPinTheme: defaultPinTheme.copyWith(
+                                decoration: defaultPinTheme.decoration!.copyWith(
+                                  borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius),
+                                  border: Border.all(color: AppColors.primary),
                                 ),
                               ),
-                            ],
+                              submittedPinTheme: defaultPinTheme.copyWith(
+                                decoration: defaultPinTheme.decoration!.copyWith(
+                                  color: AppColors.primary10,
+                                  border: Border.all(color: AppColors.primary),
+                                ),
+                              ),
+                              errorPinTheme: defaultPinTheme.copyWith(
+                                  decoration: defaultPinTheme.decoration!.copyWith(
+                                color: AppColors.error,
+                                border: Border.all(color: AppColors.error),
+                              )),
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: AppSizes.defaultSpace),
-                        SizedBox(
-                          width: AppHelperFunction.screenWidth(),
-                          child:ElevatedButton(
-                            onPressed: () => controller.navigateToOTPResponse(),
-                            child:const Text('Verify'),
-                          )
-                        ),
-                        const SizedBox(height: AppSizes.spaceBtwItems),
-                        ResendOTPSection(controller: controller),
-                      ],
-                    )),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: AppSizes.defaultSpace),
+                    SizedBox(
+                        width: AppHelperFunction.screenWidth(),
+                        child: ElevatedButton(
+                          onPressed: () => controller.navigateToOTPResponse(),
+                          child: const Text('Verify'),
+                        )),
+                    const SizedBox(height: AppSizes.spaceBtwItems),
+                    ResendOTPSection(controller: controller),
+                  ],
+                )),
               ],
             )),
       ],
@@ -125,38 +122,46 @@ class ResendOTPSection extends StatelessWidget {
       builder: (_) {
         return Column(
           children: [
-             Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                controller.showResendButton?
-                Container(
-                  height: AppSizes.buttonHeightMd,
-                  padding: const EdgeInsets.symmetric(horizontal: AppSizes.paddingXXl),
-                  decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor.withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(AppSizes.borderRadiusLg)
-                  ),
-                  child: GestureDetector(
-                    onTap: () {
-                      // Add your resend OTP logic here
-                      controller.startTimer();
-                    },
-                    child: Center(child: Text('Resend',style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Theme.of(context).primaryColor),)),
-                  ),
-                ):
-                Row(
-                  children: [
-                    Text('Resend',style: Theme.of(context).textTheme.titleMedium,),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: AppSizes.xs),
-                      child: Icon(CupertinoIcons.stopwatch_fill,color: AppColors.primary,),
-                    ),
-                    Text("${controller.start.toString()}s",style: Theme.of(context).textTheme.titleLarge,),
-                  ],
-                ),
+                controller.showResendButton
+                    ? GestureDetector(
+                        onTap: () => controller.startTimer(),
+                        child: Container(
+                          height: AppSizes.buttonHeightMd,
+                          padding: const EdgeInsets.symmetric(horizontal: AppSizes.paddingXXl),
+                          decoration: BoxDecoration(
+                              color: Theme.of(context).primaryColor.withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(AppSizes.borderRadiusLg)),
+                          child: Center(
+                              child: Text(
+                            'Resend',
+                            style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Theme.of(context).primaryColor),
+                          )),
+                        ),
+                      )
+                    : Row(
+                        children: [
+                          Text(
+                            'Resend',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: AppSizes.xs),
+                            child: Icon(
+                              CupertinoIcons.stopwatch_fill,
+                              color: AppColors.primary,
+                            ),
+                          ),
+                          Text(
+                            "${controller.start.toString()}s",
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
+                        ],
+                      ),
               ],
             ),
-
           ],
         );
       },

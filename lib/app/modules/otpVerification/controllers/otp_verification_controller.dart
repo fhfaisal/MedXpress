@@ -37,6 +37,6 @@ class OtpVerificationController extends GetxController {
   }
 
   navigateToOTPResponse(){
-    Get.toNamed(Routes.OTP_RESPNSE);
+    Get.toNamed(Routes.OTP_RESPONSE);
   }
 }
