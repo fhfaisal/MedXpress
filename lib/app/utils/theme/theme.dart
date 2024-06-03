@@ -36,6 +36,7 @@ class AppTheme {
         primary: AppColors.primary,
         brightness: Brightness.light,
         onPrimary: AppColors.primary,
+        secondary: AppColors.secondary,
       ),
       iconTheme: const IconThemeData(color: AppColors.primary)
   );

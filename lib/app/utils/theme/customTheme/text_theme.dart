@@ -31,7 +31,8 @@ class AppTextTheme {
     bodySmall: const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.w500, color: AppColors.tertiaryText),
 
     labelLarge: const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: AppColors.textPrimary),
-    labelMedium: const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: AppColors.textPrimary.withOpacity(0.5))// TextTheme
+    labelMedium: const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.w400, color: AppColors.textPrimary),
+    labelSmall: const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.w400, color: AppColors.tertiaryText),
   ); // TextTheme
 
   static TextTheme darkTextTheme = TextTheme(

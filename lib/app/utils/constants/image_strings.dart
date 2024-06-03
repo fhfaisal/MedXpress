@@ -7,4 +7,7 @@ class AppImageStrings{
   ///Login
   static const backgroundLogo="assets/logos/Background-Icon.png";
   static const fullLogo="assets/logos/Logo.png";
+  ///Home
+  static const banner="assets/images/home/Banner.png";
+  static const product1="assets/images/home/product1.png";
 }

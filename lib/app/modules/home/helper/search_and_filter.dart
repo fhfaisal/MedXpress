@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:medxpress/app/utils/constants/sizes.dart';
@@ -10,10 +11,13 @@ class SearchAndFilterSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Expanded(
-            child: SearchBar(
-              controller: null,
-              hintText: 'Medicine Search',
+         Expanded(
+            child: TapRegion(
+              onTapOutside: (event) => FocusScope.of(context).requestFocus(FocusNode()),
+              child: SearchBar(
+                controller: null,
+                hintText: 'Medicine Search',
+              ),
             )),
         const SizedBox(width: AppSizes.spaceBtwItems),
         ElevatedButton(
