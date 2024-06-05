@@ -18,12 +18,12 @@ class TopCategorySection extends StatelessWidget {
         itemCount: topCategory.length,
         //separatorBuilder: (context, index) => const SizedBox(width: AppSizes.spaceBtwItems8),
         itemBuilder: (context, index) => Container(
-          margin: const EdgeInsets.only(right: AppSizes.spaceBtwItems8),
+          padding: const EdgeInsets.only(right: AppSizes.spaceBtwItems8),
           child: Column(
             children: [
               CircleAvatar(
                   backgroundColor: topCategory.elementAt(index).color,
-                  radius: 29.5,
+                  radius: 25,
                   child: Center(
                       child: SvgPicture.asset(
                         topCategory.elementAt(index).icon,

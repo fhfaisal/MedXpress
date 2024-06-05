@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/bottomNavigationBar/bindings/bottom_navigation_bar_binding.dart';
+import '../modules/bottomNavigationBar/views/bottom_navigation_bar_view.dart';
 import '../modules/forgotPassword/bindings/forgot_password_binding.dart';
 import '../modules/forgotPassword/views/forgot_password_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -65,5 +67,10 @@ class AppPages {
         binding: OtpResponseBinding(),
         transition: Transition.zoom,
         transitionDuration: const Duration(milliseconds: 500)),
+    GetPage(
+      name: _Paths.BOTTOM_NAVIGATION_BAR,
+      page: () => const BottomNavigationBarView(),
+      binding: BottomNavigationBarBinding(),
+    ),
   ];
 }

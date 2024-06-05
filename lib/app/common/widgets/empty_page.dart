@@ -1,0 +1,75 @@
+import 'package:flutter/material.dart';
+import 'package:medxpress/app/utils/constants/image_strings.dart';
+
+class EmptyPage extends StatelessWidget {
+  const EmptyPage({
+    super.key,
+    required this.title,
+    required this.subtitle,
+    this.buttonText,
+    this.onTap,
+    this.isButton=false,
+    this.image
+  });
+
+  final String? title;
+  final String? subtitle;
+  final String? buttonText;
+  final VoidCallback? onTap;
+  final bool? isButton;
+  final Widget? image;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 23),
+      child: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            image??const Image(
+              image: AssetImage(AppImageStrings.fullLogo),
+              height: 200,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              '$title',
+              style: Theme.of(context).textTheme.titleMedium,
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              '$subtitle',
+              style: Theme.of(context).textTheme.bodyLarge,
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            GestureDetector(
+              onTap: onTap,
+              child: isButton!?Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Theme.of(context).colorScheme.primary),
+                child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        '$buttonText',
+                        style: Theme.of(context).textTheme.titleMedium,
+                        textAlign: TextAlign.center,),
+                    )),
+              ):const SizedBox(),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

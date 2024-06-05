@@ -10,6 +10,6 @@ class OtpResponseController extends GetxController {
     super.onClose();
   }
  navigateToHome(){
-   Get.toNamed(Routes.HOME);
+   Get.toNamed(Routes.BOTTOM_NAVIGATION_BAR);
  }
 }

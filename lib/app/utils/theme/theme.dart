@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medxpress/app/utils/constants/colors.dart';
 import 'package:medxpress/app/utils/constants/sizes.dart';
 import 'package:medxpress/app/utils/theme/customTheme/appbar_theme.dart';
+import 'package:medxpress/app/utils/theme/customTheme/bottom_navigation_theme.dart';
 import 'package:medxpress/app/utils/theme/customTheme/bottom_sheet_theme.dart';
 import 'package:medxpress/app/utils/theme/customTheme/checkbox_theme.dart';
 import 'package:medxpress/app/utils/theme/customTheme/chip_theme.dart';
@@ -17,7 +18,7 @@ class AppTheme {
 
   ///Light theme
   static ThemeData lightTheme = ThemeData(
-      disabledColor: AppColors.tertiaryText,
+      disabledColor: AppColors.disableText,
       useMaterial3: true,
       fontFamily: 'Poppins',
       brightness: Brightness.light,
@@ -32,13 +33,15 @@ class AppTheme {
       chipTheme: AppChipTheme.lightChipTheme,
       inputDecorationTheme: AppTextFormFieldTheme.lightInputDecorationTheme,
       searchBarTheme: AppSearchBarTheme.lightSearchBar,
-      colorScheme: const ColorScheme.light(
+      colorScheme: ColorScheme.light(
         primary: AppColors.primary,
         brightness: Brightness.light,
         onPrimary: AppColors.primary,
         secondary: AppColors.secondary,
+        onSurfaceVariant: AppColors.disableText
       ),
-      iconTheme: const IconThemeData(color: AppColors.primary)
+      iconTheme: const IconThemeData(color: AppColors.primary),
+    bottomNavigationBarTheme: AppBottomNavigationTheme.lightBottomNavigationTheme
   );
 
   ///Dark Theme

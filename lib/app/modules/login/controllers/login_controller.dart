@@ -14,6 +14,6 @@ class LoginController extends GetxController {
   }
 
   navigateToHome() {
-    Get.offAllNamed(Routes.HOME);
+    Get.offAllNamed(Routes.BOTTOM_NAVIGATION_BAR);
   }
 }

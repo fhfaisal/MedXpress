@@ -1,4 +1,10 @@
 class AppIconStrings{
+  /// Bottom Navigation
+  static const home="assets/icons/bottomNavigationIcon/inActive/home.svg";
+  static const notification="assets/icons/bottomNavigationIcon/inActive/notification.svg";
+  static const myOrder="assets/icons/bottomNavigationIcon/inActive/shopping card.svg";
+  static const prescription="assets/icons/bottomNavigationIcon/inActive/prescription.svg";
+  static const myAccount="assets/icons/bottomNavigationIcon/inActive/profile.svg";
   ///Social
   static const facebook="assets/icons/social/Facebook.svg";
   static const google="assets/icons/social/Google.svg";

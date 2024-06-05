@@ -12,7 +12,7 @@ class PopularProductSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: AppHelperFunction.screenHeight() * 0.3,
+        height: AppHelperFunction.screenHeight() * 0.25,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           shrinkWrap: true,
@@ -61,9 +61,29 @@ class PopularProductSection extends StatelessWidget {
                               ),
                               const SizedBox(height: AppSizes.paddingSm),
                               Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text('৳250/',style: Theme.of(context).textTheme.titleLarge,),
-                                  Text('৳450/',style: Theme.of(context).textTheme.labelSmall!.copyWith(decoration: TextDecoration.lineThrough)),
+                                  Row(
+                                    children: [
+                                      Text('৳250/',style: Theme.of(context).textTheme.bodyLarge,),
+                                      Text('৳450/',style: Theme.of(context).textTheme.bodySmall!.copyWith(decoration: TextDecoration.lineThrough,fontSize: 10)),
+                                    ],
+                                  ),
+                                  Container(
+                                    height: 26,
+                                    width: 26,
+                                    decoration: BoxDecoration(
+                                      color: Theme.of(context).primaryColor,
+                                      borderRadius: const BorderRadius.only(
+                                        topLeft: Radius.circular(AppSizes.borderRadiusXXL),
+                                        topRight: Radius.circular(AppSizes.borderRadiusXXL),
+                                        bottomRight: Radius.circular(AppSizes.borderRadiusXXL),
+                                      )
+                                    ),
+                                    child: const Center(
+                                      child: Icon(Icons.add,color: AppColors.white,),
+                                    ),
+                                  )
                                 ],
                               )
                             ],

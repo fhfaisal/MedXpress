@@ -9,6 +9,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:get/get.dart';
 import 'package:medxpress/app/common/widgets/discount_custom_painter.dart';
+import 'package:medxpress/app/common/widgets/empty_page.dart';
 import 'package:medxpress/app/common/widgets/section_separator.dart';
 import 'package:medxpress/app/modules/home/helper/banner_section.dart';
 import 'package:medxpress/app/modules/home/helper/header_section.dart';
@@ -18,6 +19,7 @@ import 'package:medxpress/app/modules/home/helper/top_category_section.dart';
 import 'package:medxpress/app/modules/home/helper/upload_prescription.dart';
 import 'package:medxpress/app/modules/home/model/top_category.dart';
 import 'package:medxpress/app/utils/constants/colors.dart';
+import 'package:medxpress/app/utils/constants/icon_strings.dart';
 import 'package:medxpress/app/utils/constants/image_strings.dart';
 import 'package:medxpress/app/utils/constants/sizes.dart';
 import 'package:medxpress/app/utils/helpers/helper_function.dart';
@@ -57,10 +59,19 @@ class HomeView extends GetView<HomeController> {
             onPressed: () => null,
             actionText: 'See All',
           ),
-          PopularProductSection(),
+          const PopularProductSection(),
+          const SizedBox(height: AppSizes.spaceBtwItems12),
+          SectionSeparation(
+            separationText: 'Popular Products',
+            isAction: true,
+            onPressed: () => null,
+            actionText: 'See All',
+          ),
+          const SizedBox(height: AppSizes.spaceBtwItems12),
+          const TopCategorySection(),
         ],
       ),
-    ));
+    ),
+    );
   }
 }
-
