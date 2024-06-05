@@ -1,10 +1,16 @@
 class AppIconStrings{
-  /// Bottom Navigation
+  /// Bottom Navigation inactive
   static const home="assets/icons/bottomNavigationIcon/inActive/home.svg";
   static const notification="assets/icons/bottomNavigationIcon/inActive/notification.svg";
-  static const myOrder="assets/icons/bottomNavigationIcon/inActive/shopping card.svg";
+  static const myOrder="assets/icons/bottomNavigationIcon/inActive/shopping.svg";
   static const prescription="assets/icons/bottomNavigationIcon/inActive/prescription.svg";
   static const myAccount="assets/icons/bottomNavigationIcon/inActive/profile.svg";
+  /// Bottom Navigation active
+  static const homeActive="assets/icons/bottomNavigationIcon/active/active-home.svg";
+  static const notificationActive="assets/icons/bottomNavigationIcon/active/active-notification.svg";
+  static const myOrderActive="assets/icons/bottomNavigationIcon/active/active-shopping.svg";
+  static const prescriptionActive="assets/icons/bottomNavigationIcon/active/active-prescription.svg";
+  static const myAccountActive="assets/icons/bottomNavigationIcon/active/active-profile.svg";
   ///Social
   static const facebook="assets/icons/social/Facebook.svg";
   static const google="assets/icons/social/Google.svg";

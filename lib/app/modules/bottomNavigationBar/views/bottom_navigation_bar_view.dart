@@ -32,27 +32,29 @@ class BottomNavigationBarView extends GetView<BottomNavigationBarController> {
                 BottomNavigationBarItem(
                     icon: SvgPicture.asset(AppIconStrings.home),
                     label: "Home",
-                    activeIcon: SvgPicture.asset(AppIconStrings.home),
+                    activeIcon: SvgPicture.asset(AppIconStrings.homeActive),
                 ),
                 BottomNavigationBarItem(
                   icon: SvgPicture.asset(AppIconStrings.notification),
                   label: "Notification",
                   activeIcon: SvgPicture.asset(
-                    AppIconStrings.notification,
-                    color: AppColors.primary,
+                    AppIconStrings.notificationActive,
                   ),
                 ),
                 BottomNavigationBarItem(
                   icon: SvgPicture.asset(AppIconStrings.myOrder),
                   label: "My Order",
+                  activeIcon: SvgPicture.asset(AppIconStrings.myOrderActive),
                 ),
                 BottomNavigationBarItem(
                   icon: SvgPicture.asset(AppIconStrings.prescription),
                   label: "Prescription",
+                  activeIcon: SvgPicture.asset(AppIconStrings.prescriptionActive),
                 ),
                 BottomNavigationBarItem(
                   icon: SvgPicture.asset(AppIconStrings.myAccount),
                   label: "My Account",
+                  activeIcon: SvgPicture.asset(AppIconStrings.myAccountActive),
                 ),
               ],
             ),

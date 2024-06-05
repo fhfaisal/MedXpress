@@ -22,12 +22,12 @@ class TopCategorySection extends StatelessWidget {
           child: Column(
             children: [
               CircleAvatar(
-                  backgroundColor: topCategory.elementAt(index).color,
-                  radius: 25,
+                  backgroundColor: AppColors.primary5, //topCategory.elementAt(index).color,
+                  radius: 30,
                   child: Center(
                       child: SvgPicture.asset(
                         topCategory.elementAt(index).icon,
-                        color: AppColors.white,
+                        color: AppColors.primary,
                       ))),
               const SizedBox(height: 3),
               Text(topCategory.elementAt(index).title,style: Theme.of(context).textTheme.labelMedium,overflow: TextOverflow.ellipsis,maxLines: 1,)

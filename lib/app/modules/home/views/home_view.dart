@@ -12,11 +12,13 @@ import 'package:medxpress/app/common/widgets/discount_custom_painter.dart';
 import 'package:medxpress/app/common/widgets/empty_page.dart';
 import 'package:medxpress/app/common/widgets/section_separator.dart';
 import 'package:medxpress/app/modules/home/helper/banner_section.dart';
+import 'package:medxpress/app/modules/home/helper/feature_brands.dart';
 import 'package:medxpress/app/modules/home/helper/header_section.dart';
 import 'package:medxpress/app/modules/home/helper/popular_product.dart';
 import 'package:medxpress/app/modules/home/helper/search_and_filter.dart';
 import 'package:medxpress/app/modules/home/helper/top_category_section.dart';
 import 'package:medxpress/app/modules/home/helper/upload_prescription.dart';
+import 'package:medxpress/app/modules/home/model/featured_brands.dart';
 import 'package:medxpress/app/modules/home/model/top_category.dart';
 import 'package:medxpress/app/utils/constants/colors.dart';
 import 'package:medxpress/app/utils/constants/icon_strings.dart';
@@ -32,46 +34,71 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Padding(
-      padding: const EdgeInsets.fromLTRB(AppSizes.defaultSpace, AppSizes.defaultSpace, AppSizes.defaultSpace, 0),
-      child: ListView(
-        shrinkWrap: true,
-        children: [
-          const HeaderSection(),
-          const SizedBox(height: AppSizes.spaceBtwItems),
-          const SearchAndFilterSection(),
-          const SizedBox(height: AppSizes.spaceBtwItems),
-          const BannerSection(),
-          const SizedBox(height: AppSizes.spaceBtwItems),
-          const UploadPrescriptionSection(),
-          const SizedBox(height: AppSizes.spaceBtwItems),
-          SectionSeparation(
-            separationText: 'Top Category',
-            isAction: true,
-            onPressed: () => null,
-            actionText: 'See All',
-          ),
-          const SizedBox(height: AppSizes.spaceBtwItems12),
-          const TopCategorySection(),
-          SectionSeparation(
-            separationText: 'Popular Products',
-            isAction: true,
-            onPressed: () => null,
-            actionText: 'See All',
-          ),
-          const PopularProductSection(),
-          const SizedBox(height: AppSizes.spaceBtwItems12),
-          SectionSeparation(
-            separationText: 'Popular Products',
-            isAction: true,
-            onPressed: () => null,
-            actionText: 'See All',
-          ),
-          const SizedBox(height: AppSizes.spaceBtwItems12),
-          const TopCategorySection(),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(AppSizes.defaultSpace, AppSizes.defaultSpace, AppSizes.defaultSpace, 0),
+        child: ListView(
+          shrinkWrap: true,
+          children: [
+            const HeaderSection(),
+            const SizedBox(height: AppSizes.spaceBtwItems),
+            const SearchAndFilterSection(),
+            const SizedBox(height: AppSizes.spaceBtwItems),
+            const BannerSection(),
+            const SizedBox(height: AppSizes.spaceBtwItems),
+            const UploadPrescriptionSection(),
+            const SizedBox(height: AppSizes.spaceBtwItems),
+            SectionSeparation(
+              separationText: 'Top Category',
+              isAction: true,
+              onPressed: () => null,
+              actionText: 'See All',
+            ),
+            const SizedBox(height: AppSizes.spaceBtwItems12),
+            const TopCategorySection(),
+            SectionSeparation(
+              separationText: 'Popular Products',
+              isAction: true,
+              onPressed: () => null,
+              actionText: 'See All',
+            ),
+            const PopularProductSection(),
+            const SizedBox(height: AppSizes.spaceBtwItems12),
+            SectionSeparation(
+              separationText: 'Feature Brands',
+              isAction: true,
+              onPressed: () => null,
+              actionText: 'See All',
+            ),
+            //const SizedBox(height: AppSizes.spaceBtwItems12),
+            const FeatureBrandsSection(),
+            const SizedBox(height: AppSizes.spaceBtwItems12),
+            SectionSeparation(
+              separationText: 'Partners',
+              isAction: false,
+              onPressed: () => null,
+              actionText: 'See All',
+            ),
+            Container(
+                height: AppHelperFunction.screenHeight() * 0.15,
+                decoration: BoxDecoration(
+                    color: AppColors.primary5,
+                    borderRadius: BorderRadius.circular(AppSizes.borderRadiusXXL),
+                    border: Border.all(color: Theme.of(context).primaryColor.withOpacity(0.5))),
+                child: CarouselSlider.builder(
+                  scrollDirection: Axis.vertical,
+                  enableAutoSlider: true,
+                  unlimitedMode: true,
+                  //controller: controller.sliderController,
+                  slideTransform:  DefaultTransform(),
+                  itemCount: featureBrands.length,
+                  slideBuilder: (index) => Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Image(image: AssetImage(featureBrands.elementAt(index).image),fit: BoxFit.fill,width: AppHelperFunction.screenWidth(),),
+                  ),
+                ))
+          ],
+        ),
       ),
-    ),
     );
   }
 }

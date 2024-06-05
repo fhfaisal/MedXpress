@@ -11,6 +11,7 @@ abstract class Routes {
   static const OTP_VERIFICATION = _Paths.OTP_VERIFICATION;
   static const OTP_RESPONSE = _Paths.OTP_RESPONSE;
   static const BOTTOM_NAVIGATION_BAR = _Paths.BOTTOM_NAVIGATION_BAR;
+  static const NOTIFICATION = _Paths.NOTIFICATION;
 }
 
 abstract class _Paths {
@@ -23,4 +24,5 @@ abstract class _Paths {
   static const OTP_VERIFICATION = '/otp-verification';
   static const OTP_RESPONSE = '/otp-response';
   static const BOTTOM_NAVIGATION_BAR = '/bottom-navigation-bar';
+  static const NOTIFICATION = '/notification';
 }
