@@ -73,29 +73,29 @@ class HomeView extends GetView<HomeController> {
             const FeatureBrandsSection(),
             const SizedBox(height: AppSizes.spaceBtwItems12),
             SectionSeparation(
-              separationText: 'Partners',
+              separationText: 'Articles',
               isAction: false,
               onPressed: () => null,
               actionText: 'See All',
             ),
-            Container(
-                height: AppHelperFunction.screenHeight() * 0.15,
-                decoration: BoxDecoration(
-                    color: AppColors.primary5,
-                    borderRadius: BorderRadius.circular(AppSizes.borderRadiusXXL),
-                    border: Border.all(color: Theme.of(context).primaryColor.withOpacity(0.5))),
-                child: CarouselSlider.builder(
-                  scrollDirection: Axis.vertical,
-                  enableAutoSlider: true,
-                  unlimitedMode: true,
-                  //controller: controller.sliderController,
-                  slideTransform:  DefaultTransform(),
-                  itemCount: featureBrands.length,
-                  slideBuilder: (index) => Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Image(image: AssetImage(featureBrands.elementAt(index).image),fit: BoxFit.fill,width: AppHelperFunction.screenWidth(),),
-                  ),
-                ))
+            ClipRRect(
+              borderRadius: BorderRadius.circular(AppSizes.borderRadiusXXL),
+              child: Container(
+                  height: AppHelperFunction.screenHeight() * 0.15,
+                  decoration: BoxDecoration(
+                      color: AppColors.primary5,
+                      borderRadius: BorderRadius.circular(AppSizes.borderRadiusXXL),
+                      border: Border.all(color: Theme.of(context).primaryColor.withOpacity(0.5))),
+                  child: CarouselSlider.builder(
+                    scrollDirection: Axis.vertical,
+                    enableAutoSlider: true,
+                    unlimitedMode: true,
+                    //controller: controller.sliderController,
+                    slideTransform:  const DefaultTransform(),
+                    itemCount: featureBrands.length,
+                    slideBuilder: (index) => Image(image: const AssetImage(AppImageStrings.refer),fit: BoxFit.cover,width: AppHelperFunction.screenWidth(),),
+                  )),
+            )
           ],
         ),
       ),

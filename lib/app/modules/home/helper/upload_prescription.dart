@@ -13,7 +13,7 @@ class UploadPrescriptionSection extends StatelessWidget {
         margin: const EdgeInsets.symmetric(horizontal: AppSizes.defaultSpace),
         height: AppSizes.buttonHeight,
         decoration: BoxDecoration(
-            color: AppColors.updateButton,
+            color: AppColors.bgAccent,
             borderRadius: BorderRadius.circular(AppSizes.buttonRadius)
         ),
         child: Row(

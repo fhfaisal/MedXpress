@@ -23,4 +23,7 @@ class AppIconStrings{
   static const wellness="assets/icons/topCategory/Wellness.svg";
   static const skinAndHair="assets/icons/topCategory/Skin & Hair.svg";
   static const homeopathy="assets/icons/topCategory/Homeopathy.svg";
+  ///Notification
+  static const bellNotificationOutline="assets/icons/notification/bell-notification-outline.svg";
+  static const notificationPromotion="assets/icons/notification/notification-promotion.svg";
 }

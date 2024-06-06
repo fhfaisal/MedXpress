@@ -55,6 +55,7 @@ flutter:
     - assets/splash/
     - assets/images/home/
     - assets/icons/topCategory/
+    - assets/icons/notification/
     - assets/icons/bottomNavigationIcon/inActive/
     - assets/icons/bottomNavigationIcon/active/
   fonts:

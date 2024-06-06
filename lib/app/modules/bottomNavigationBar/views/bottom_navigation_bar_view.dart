@@ -5,6 +5,9 @@ import 'package:get/get.dart';
 import 'package:medxpress/app/common/widgets/empty_page.dart';
 import 'package:medxpress/app/modules/home/controllers/home_controller.dart';
 import 'package:medxpress/app/modules/home/views/home_view.dart';
+import 'package:medxpress/app/modules/myOrder/views/my_order_view.dart';
+import 'package:medxpress/app/modules/notification/controllers/notification_controller.dart';
+import 'package:medxpress/app/modules/notification/views/notification_view.dart';
 import 'package:medxpress/app/utils/constants/colors.dart';
 import 'package:medxpress/app/utils/constants/icon_strings.dart';
 import 'package:medxpress/app/utils/constants/sizes.dart';
@@ -17,7 +20,16 @@ class BottomNavigationBarView extends GetView<BottomNavigationBarController> {
   @override
   Widget build(BuildContext context) {
     return Obx(() => Scaffold(
-        body: getPage(controller.selectedIndex.value),
+        body: AnimatedSwitcher(
+          duration: const Duration(milliseconds: 400),
+          transitionBuilder: (Widget child, Animation<double> animation) {
+            return FadeTransition(
+              opacity: animation,
+              child: child,
+            );
+          },
+          child: getPage(controller.selectedIndex.value),
+        ),
         bottomNavigationBar: Card(
           margin: const EdgeInsets.all(0),
           elevation: 15,
@@ -69,15 +81,16 @@ Widget getPage(int index) {
       Get.put(HomeController());
       return const HomeView();
     case 1:
+      Get.put(NotificationController());
+      return const NotificationView();
+    case 2:
+      return const MyOrderView();
+    default:
       return EmptyPage(
         buttonText: 'Back'.tr,
         title: 'Under Developing'.tr,
         subtitle: 'This page under the developing process'.tr,
         isButton: false,
-      );
-    default:
-      return Center(
-        child: Text("something_wrong".tr),
       );
   }
 }

@@ -33,6 +33,7 @@ class AppSizes {
 
 // AppBar height
   static const double appBarHeight=56.0;
+  static const double tabBarHeight=32.0;
 
 // Image sizes
   static const double imageThumbSize= 80.0;

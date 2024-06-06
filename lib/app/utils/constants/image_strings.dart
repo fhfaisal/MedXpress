@@ -8,7 +8,8 @@ class AppImageStrings{
   static const backgroundLogo="assets/logos/icon.png";
   static const fullLogo="assets/logos/logo-large.png";
   ///Home
-  static const banner="assets/images/home/Banner.png";
+  static const banner="assets/images/home/banner.jpg";
+  static const refer="assets/images/home/refer.jpg";
   static const aci="assets/images/home/aci.png";
   static const beximco="assets/images/home/beximco.png";
   static const gsk="assets/images/home/gsk.png";

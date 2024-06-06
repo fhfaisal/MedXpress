@@ -12,6 +12,7 @@ abstract class Routes {
   static const OTP_RESPONSE = _Paths.OTP_RESPONSE;
   static const BOTTOM_NAVIGATION_BAR = _Paths.BOTTOM_NAVIGATION_BAR;
   static const NOTIFICATION = _Paths.NOTIFICATION;
+  static const MY_ORDER = _Paths.MY_ORDER;
 }
 
 abstract class _Paths {
@@ -25,4 +26,5 @@ abstract class _Paths {
   static const OTP_RESPONSE = '/otp-response';
   static const BOTTOM_NAVIGATION_BAR = '/bottom-navigation-bar';
   static const NOTIFICATION = '/notification';
+  static const MY_ORDER = '/my-order';
 }
