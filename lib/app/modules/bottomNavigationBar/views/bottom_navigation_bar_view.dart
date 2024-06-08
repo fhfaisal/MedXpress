@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:medxpress/app/common/widgets/empty_page.dart';
 import 'package:medxpress/app/modules/home/controllers/home_controller.dart';
 import 'package:medxpress/app/modules/home/views/home_view.dart';
+import 'package:medxpress/app/modules/myOrder/controllers/my_order_controller.dart';
 import 'package:medxpress/app/modules/myOrder/views/my_order_view.dart';
 import 'package:medxpress/app/modules/notification/controllers/notification_controller.dart';
 import 'package:medxpress/app/modules/notification/views/notification_view.dart';
@@ -84,6 +85,7 @@ Widget getPage(int index) {
       Get.put(NotificationController());
       return const NotificationView();
     case 2:
+      Get.put(MyOrderController());
       return const MyOrderView();
     default:
       return EmptyPage(

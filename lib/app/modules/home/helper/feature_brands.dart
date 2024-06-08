@@ -25,7 +25,7 @@ class FeatureBrandsSection extends StatelessWidget {
               Card(
                 margin: const EdgeInsets.all(0),
                 elevation: 2,
-                shadowColor: AppColors.secondary.withOpacity(0.2),
+                shadowColor: AppColors.shadowColor,
                 surfaceTintColor: AppColors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(AppSizes.cardRadiusSm)

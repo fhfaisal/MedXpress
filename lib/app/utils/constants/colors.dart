@@ -27,6 +27,7 @@ class AppColors {
   static const Color dark = Color(0xFF272727);
   static const Color primaryBackground = Color(0xFFF3F5FF);
   static const Color bgAccent = Color(0xFFFD6C57);
+  static const Color shadowColor = Color(0x33142850);
   ///Search background
   static const Color searchBg= Color(0xfff3f8f9);
 

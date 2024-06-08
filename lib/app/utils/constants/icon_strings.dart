@@ -26,4 +26,9 @@ class AppIconStrings{
   ///Notification
   static const bellNotificationOutline="assets/icons/notification/bell-notification-outline.svg";
   static const notificationPromotion="assets/icons/notification/notification-promotion.svg";
+  ///My Order
+  static const all="assets/icons/myOrder/all.svg";
+  static const processing="assets/icons/myOrder/processing.svg";
+  static const delivered="assets/icons/myOrder/delivered.svg";
+  static const canceled="assets/icons/myOrder/canceled.svg";
 }

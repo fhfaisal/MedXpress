@@ -6,12 +6,13 @@ class CustomButton1 extends StatelessWidget {
     super.key,
     required this.child,
     this.height,
+    this.width,
     this.padding,
     this.background,
     this.borderRadius,
     this.onTap,
   });
-  final double? height;
+  final double? height,width;
   final EdgeInsets? padding;
   final Color? background;
   final BorderRadius? borderRadius;
@@ -23,7 +24,9 @@ class CustomButton1 extends StatelessWidget {
       onTap: onTap,
       child: Container(
         height: height?? AppSizes.buttonHeightMd,
+        width: width?? AppSizes.buttonWidth,
         padding: padding?? const EdgeInsets.symmetric(horizontal: AppSizes.paddingMd),
+        margin: padding?? const EdgeInsets.symmetric(horizontal: AppSizes.paddingMd),
         decoration: BoxDecoration(
             color: background?? Theme.of(context).primaryColor.withOpacity(0.1),
             borderRadius: borderRadius?? BorderRadius.circular(AppSizes.borderRadiusSm)),

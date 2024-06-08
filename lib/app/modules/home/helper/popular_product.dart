@@ -34,7 +34,7 @@ class PopularProductSection extends StatelessWidget {
                       child: Card(
                         surfaceTintColor: AppColors.white,
                         elevation: 4,
-                        shadowColor: AppColors.secondary.withOpacity(0.2),
+                        shadowColor: AppColors.shadowColor,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(AppSizes.cardRadiusMd)),
                         margin: const EdgeInsets.all(0),

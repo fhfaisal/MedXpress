@@ -28,7 +28,7 @@ class AppSizes {
   static const double buttonHeightMd = 34;
   static const double buttonHeightSm = 18;
   static const double buttonRadius = 12.0;
-  static const double buttonWidth = 12.0;
+  static const double buttonWidth = 52.0;
   static const double buttonElevation = 4.0;
 
 // AppBar height
