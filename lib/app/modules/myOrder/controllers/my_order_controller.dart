@@ -22,6 +22,13 @@ class MyOrderController extends GetxController {
         amount: 165,
         deliveryType: "Regular Delivery",
       ),
+      Order(
+        id: "#025DF",
+        date: DateTime.parse("2024-05-16T09:51:00"),
+        status: "Processing",
+        amount: 565,
+        deliveryType: "Regular Delivery",
+      ),
     ],
     delivered: [
       Order(
@@ -38,6 +45,13 @@ class MyOrderController extends GetxController {
         date: DateTime.parse("2024-05-16T09:51:00"),
         status: "Canceled",
         amount: 2505,
+        deliveryType: "Regular Delivery",
+      ),
+      Order(
+        id: "#DG524",
+        date: DateTime.parse("2024-05-16T09:51:00"),
+        status: "Canceled",
+        amount: 255,
         deliveryType: "Regular Delivery",
       ),
     ],
