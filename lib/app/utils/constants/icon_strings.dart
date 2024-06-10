@@ -46,10 +46,19 @@ class AppIconStrings {
   static const draft = "assets/icons/prescription/draft.svg";
 
   ///Prescription
+  static const myProfile = "assets/icons/myProfile/my-profile.svg";
   static const changePassword = "assets/icons/myProfile/change-password.svg";
-  static const FAQ = "assets/icons/myProfile/FAQ.svg";
-  static const myProfile = "assets/icons/myProfile/FAQ.svg";
-  static const specialOffer = "assets/icons/myProfile/special-offer.svg";
-  static const transactionHistory = "assets/icons/myProfile/transaction-history.svg";
+  static const notifications = "assets/icons/myProfile/notifications.svg";
   static const wishList = "assets/icons/myProfile/wish-list.svg";
+  static const specialOffer = "assets/icons/myProfile/special-offers.svg";
+  static const transactionHistory = "assets/icons/myProfile/transaction-history.svg";
+  static const FAQ = "assets/icons/myProfile/FAQ.svg";
+  //App Setting
+static const aboutUs="assets/icons/myProfile/About Us.svg";
+static const appPermission="assets/icons/myProfile/App Permission.svg";
+static const appVersion="assets/icons/myProfile/App Version.svg";
+static const contactUs="assets/icons/myProfile/Contact Us.svg";
+static const rateOurApp="assets/icons/myProfile/Rate Our App.svg";
+static const termsAndConditions="assets/icons/myProfile/Terms & Conditions.svg";
+static const logOut="assets/icons/myProfile/Log Out.svg";
 }
