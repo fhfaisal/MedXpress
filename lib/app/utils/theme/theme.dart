@@ -4,6 +4,7 @@ import 'package:medxpress/app/utils/constants/sizes.dart';
 import 'package:medxpress/app/utils/theme/customTheme/appbar_theme.dart';
 import 'package:medxpress/app/utils/theme/customTheme/bottom_navigation_theme.dart';
 import 'package:medxpress/app/utils/theme/customTheme/bottom_sheet_theme.dart';
+import 'package:medxpress/app/utils/theme/customTheme/card_theme.dart';
 import 'package:medxpress/app/utils/theme/customTheme/checkbox_theme.dart';
 import 'package:medxpress/app/utils/theme/customTheme/chip_theme.dart';
 import 'package:medxpress/app/utils/theme/customTheme/input_decoration_theme.dart';
@@ -41,7 +42,9 @@ class AppTheme {
         onSurfaceVariant: AppColors.disableText
       ),
       iconTheme: const IconThemeData(color: AppColors.primary),
-    bottomNavigationBarTheme: AppBottomNavigationTheme.lightBottomNavigationTheme
+    bottomNavigationBarTheme: AppBottomNavigationTheme.lightBottomNavigationTheme,
+    cardTheme:AppCardTheme.lightCardTheme,
+    dividerTheme: DividerThemeData(color: AppColors.secondary.withOpacity(0.1))
   );
 
   ///Dark Theme

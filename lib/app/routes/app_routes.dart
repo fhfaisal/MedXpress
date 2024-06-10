@@ -13,6 +13,8 @@ abstract class Routes {
   static const BOTTOM_NAVIGATION_BAR = _Paths.BOTTOM_NAVIGATION_BAR;
   static const NOTIFICATION = _Paths.NOTIFICATION;
   static const MY_ORDER = _Paths.MY_ORDER;
+  static const PRESCRIPTION = _Paths.PRESCRIPTION;
+  static const MY_ACCOUNT = _Paths.MY_ACCOUNT;
 }
 
 abstract class _Paths {
@@ -27,4 +29,6 @@ abstract class _Paths {
   static const BOTTOM_NAVIGATION_BAR = '/bottom-navigation-bar';
   static const NOTIFICATION = '/notification';
   static const MY_ORDER = '/my-order';
+  static const PRESCRIPTION = '/prescription';
+  static const MY_ACCOUNT = '/my-account';
 }

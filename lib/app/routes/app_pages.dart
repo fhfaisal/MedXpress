@@ -8,6 +8,8 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
+import '../modules/myAccount/bindings/my_account_binding.dart';
+import '../modules/myAccount/views/my_account_view.dart';
 import '../modules/myOrder/bindings/my_order_binding.dart';
 import '../modules/myOrder/views/my_order_view.dart';
 import '../modules/notification/bindings/notification_binding.dart';
@@ -18,6 +20,8 @@ import '../modules/otpResponse/bindings/otp_response_binding.dart';
 import '../modules/otpResponse/views/otp_response_view.dart';
 import '../modules/otpVerification/bindings/otp_verification_binding.dart';
 import '../modules/otpVerification/views/otp_verification_view.dart';
+import '../modules/prescription/bindings/prescription_binding.dart';
+import '../modules/prescription/views/prescription_view.dart';
 import '../modules/signUp/bindings/sign_up_binding.dart';
 import '../modules/signUp/views/sign_up_view.dart';
 
@@ -85,6 +89,16 @@ class AppPages {
       name: _Paths.MY_ORDER,
       page: () => const MyOrderView(),
       binding: MyOrderBinding(),
+    ),
+    GetPage(
+      name: _Paths.PRESCRIPTION,
+      page: () => const PrescriptionView(),
+      binding: PrescriptionBinding(),
+    ),
+    GetPage(
+      name: _Paths.MY_ACCOUNT,
+      page: () => const MyAccountView(),
+      binding: MyAccountBinding(),
     ),
   ];
 }

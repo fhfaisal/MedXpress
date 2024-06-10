@@ -24,11 +24,9 @@ class OrdersList extends StatelessWidget {
         itemBuilder: (context, index) {
           Order order = controller.currentOrders[index];
           return Card(
-            surfaceTintColor: AppColors.white,
-            elevation: 4,
-            shadowColor: AppColors.shadowColor,
+            margin: const EdgeInsets.symmetric(vertical: AppSizes.paddingSm),
             shape: RoundedRectangleBorder(
-                side: BorderSide(color: AppColors.primary50), borderRadius: BorderRadius.circular(AppSizes.borderRadiusXXL)),
+                side: BorderSide(color: AppColors.primary10), borderRadius: BorderRadius.circular(AppSizes.borderRadiusXXL)),
             child: Padding(
               padding: const EdgeInsets.all(AppSizes.paddingXXl),
               child: Column(

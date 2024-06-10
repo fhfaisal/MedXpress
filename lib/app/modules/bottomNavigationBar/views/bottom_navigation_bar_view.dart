@@ -5,10 +5,14 @@ import 'package:get/get.dart';
 import 'package:medxpress/app/common/widgets/empty_page.dart';
 import 'package:medxpress/app/modules/home/controllers/home_controller.dart';
 import 'package:medxpress/app/modules/home/views/home_view.dart';
+import 'package:medxpress/app/modules/myAccount/controllers/my_account_controller.dart';
+import 'package:medxpress/app/modules/myAccount/views/my_account_view.dart';
 import 'package:medxpress/app/modules/myOrder/controllers/my_order_controller.dart';
 import 'package:medxpress/app/modules/myOrder/views/my_order_view.dart';
 import 'package:medxpress/app/modules/notification/controllers/notification_controller.dart';
 import 'package:medxpress/app/modules/notification/views/notification_view.dart';
+import 'package:medxpress/app/modules/prescription/controllers/prescription_controller.dart';
+import 'package:medxpress/app/modules/prescription/views/prescription_view.dart';
 import 'package:medxpress/app/utils/constants/colors.dart';
 import 'package:medxpress/app/utils/constants/icon_strings.dart';
 import 'package:medxpress/app/utils/constants/sizes.dart';
@@ -87,11 +91,17 @@ Widget getPage(int index) {
     case 2:
       Get.put(MyOrderController());
       return const MyOrderView();
+    case 3:
+      Get.put(PrescriptionController());
+      return const PrescriptionView();
+    case 4:
+      Get.put(MyAccountController());
+      return const MyAccountView();
     default:
       return EmptyPage(
         buttonText: 'Back'.tr,
-        title: 'Under Developing'.tr,
-        subtitle: 'This page under the developing process'.tr,
+        title: 'Error'.tr,
+        subtitle: 'Unexpected error'.tr,
         isButton: false,
       );
   }

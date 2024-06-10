@@ -57,6 +57,8 @@ flutter:
     - assets/icons/topCategory/
     - assets/icons/notification/
     - assets/icons/myOrder/
+    - assets/icons/prescription/
+    - assets/icons/myProfile/
     - assets/icons/bottomNavigationIcon/inActive/
     - assets/icons/bottomNavigationIcon/active/
   fonts:

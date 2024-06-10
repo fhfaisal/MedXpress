@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:medxpress/app/modules/myOrder/controllers/my_order_controller.dart';
 import 'package:medxpress/app/utils/constants/colors.dart';
 import 'package:medxpress/app/utils/constants/sizes.dart';
-import '../controllers/my_order_controller.dart';
 import '../helper//orders_list.dart';
 
 class MyOrderView extends GetView<MyOrderController> {
