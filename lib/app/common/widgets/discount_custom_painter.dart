@@ -1,50 +1,24 @@
-import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:medxpress/app/utils/constants/colors.dart';
 import 'package:medxpress/app/utils/helpers/helper_function.dart';
 
 // Custom Painter for Discount Label
-class RPSCustomPainter extends CustomPainter{
-
+class RPSCustomPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
 
-
-
-    // Layer 1
-
-    Paint paint_fill_0 = Paint()
-      ..color = const Color.fromARGB(255, 253, 108, 87)
-      ..style = PaintingStyle.fill
-      ..strokeWidth = size.width*0.01
-      ..strokeCap = StrokeCap.butt
-      ..strokeJoin = StrokeJoin.miter;
-
-
     Path path_0 = Path();
-    path_0.moveTo(size.width*0.0017000,size.height*1.0069000);
-    path_0.quadraticBezierTo(size.width*0.0017000,size.height*0.4782000,size.width*0.0017000,size.height*0.3020000);
-    path_0.cubicTo(size.width*-0.0017000,size.height*-0.0347000,size.width*-0.0387000,size.height*0.0106000,size.width*0.3038000,size.height*-0.0002000);
-    path_0.quadraticBezierTo(size.width*0.4800000,size.height*-0.0002000,size.width*1.0087000,size.height*-0.0002000);
-    path_0.lineTo(size.width*0.0017000,size.height*1.0069000);
+    path_0.moveTo(size.width*0.9886364,0);
+    path_0.lineTo(0,size.height*0.9886364);
+    path_0.lineTo(0,size.height*0.2727273);
+    path_0.cubicTo(0,size.height*0.1220455,size.width*0.1220455,0,size.width*0.2727273,0);
+    path_0.lineTo(size.width*0.9886364,0);
     path_0.close();
 
-    canvas.drawPath(path_0, paint_fill_0);
-
-
-    // Layer 1
-
-    Paint paint_stroke_0 = Paint()
-      ..color = const Color.fromARGB(255, 253, 108, 87)
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 0
-      ..strokeCap = StrokeCap.butt
-      ..strokeJoin = StrokeJoin.miter;
-
-
-
-    canvas.drawPath(path_0, paint_stroke_0);
-
+    Paint paint_0_fill = Paint()..style=PaintingStyle.fill;
+    paint_0_fill.color = Color(0xffFD6C57).withOpacity(1.0);
+    canvas.drawPath(path_0,paint_0_fill);
 
   }
 
@@ -52,61 +26,7 @@ class RPSCustomPainter extends CustomPainter{
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
     return true;
   }
-
 }
-
-// class RPSCustomPainter extends CustomPainter{
-//
-//   @override
-//   void paint(Canvas canvas, Size size) {
-//
-//
-//
-//     // Layer 1
-//
-//     Paint paint_fill_0 = Paint()
-//       ..color = const Color.fromARGB(255, 253, 108, 87)
-//       ..style = PaintingStyle.fill
-//       ..strokeWidth = size.width*0.01
-//       ..strokeCap = StrokeCap.butt
-//       ..strokeJoin = StrokeJoin.miter;
-//
-//
-//     Path path_0 = Path();
-//     path_0.moveTo(size.width*0.0017000,size.height*1.0069000);
-//     path_0.quadraticBezierTo(size.width*0.0017000,size.height*0.4782000,size.width*0.0017000,size.height*0.3020000);
-//     path_0.cubicTo(size.width*0.0033000,size.height*0.0053000,size.width*0.0063000,size.height*0.0056000,size.width*0.3038000,size.height*-0.0002000);
-//     path_0.quadraticBezierTo(size.width*0.4800000,size.height*-0.0002000,size.width*1.0087000,size.height*-0.0002000);
-//     path_0.lineTo(size.width*0.0017000,size.height*1.0069000);
-//     path_0.close();
-//
-//     canvas.drawPath(path_0, paint_fill_0);
-//
-//
-//     // Layer 1
-//
-//     Paint paint_stroke_0 = Paint()
-//       ..color = const Color.fromARGB(255, 253, 108, 87)
-//       ..style = PaintingStyle.stroke
-//       ..strokeWidth = 0
-//       ..strokeCap = StrokeCap.butt
-//       ..strokeJoin = StrokeJoin.miter;
-//
-//
-//
-//     canvas.drawPath(path_0, paint_stroke_0);
-//
-//
-//   }
-//
-//   @override
-//   bool shouldRepaint(covariant CustomPainter oldDelegate) {
-//     return true;
-//   }
-//
-// }
-
-
 
 
 // Discount Label Widget

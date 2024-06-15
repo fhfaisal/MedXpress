@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 import 'package:medxpress/app/common/widgets/background_stack.dart';
-import 'package:medxpress/app/modules/login/views/login_view.dart';
 import 'package:medxpress/app/utils/constants/colors.dart';
 import 'package:medxpress/app/utils/constants/icon_strings.dart';
 import 'package:medxpress/app/utils/constants/sizes.dart';

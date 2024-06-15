@@ -1,7 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:medxpress/app/utils/constants/colors.dart';
-import 'package:medxpress/app/utils/constants/icon_strings.dart';
 
 class NotificationItem {
   final String icon;

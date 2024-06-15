@@ -1,17 +1,13 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'package:get/get.dart';
-import 'package:medxpress/app/utils/constants/image_strings.dart';
 import 'package:medxpress/app/utils/constants/sizes.dart';
 import 'package:medxpress/app/utils/device/device_utility.dart';
-import 'package:medxpress/app/utils/helpers/helper_function.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../utils/constants/colors.dart';
 import '../controllers/on_boarding_controller.dart';
-import '../widgets/on_boarding.dart';
 
 class OnBoardingView extends GetView<OnBoardingController> {
   const OnBoardingView({super.key});

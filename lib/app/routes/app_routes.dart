@@ -15,6 +15,7 @@ abstract class Routes {
   static const MY_ORDER = _Paths.MY_ORDER;
   static const PRESCRIPTION = _Paths.PRESCRIPTION;
   static const MY_ACCOUNT = _Paths.MY_ACCOUNT;
+  static const PRODUCT_DETAILS = _Paths.PRODUCT_DETAILS;
 }
 
 abstract class _Paths {
@@ -31,4 +32,5 @@ abstract class _Paths {
   static const MY_ORDER = '/my-order';
   static const PRESCRIPTION = '/prescription';
   static const MY_ACCOUNT = '/my-account';
+  static const PRODUCT_DETAILS = '/product-details';
 }

@@ -6,6 +6,7 @@ class OtpResponseController extends GetxController {
   void onInit() {
     super.onInit();
   }
+  @override
   onClose(){
     super.onClose();
   }

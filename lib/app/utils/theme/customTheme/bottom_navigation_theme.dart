@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:medxpress/app/utils/constants/colors.dart';
-import 'package:medxpress/app/utils/constants/sizes.dart';
 
 class AppBottomNavigationTheme {
   AppBottomNavigationTheme._(); //To avoid creating instances

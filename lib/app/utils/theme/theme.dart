@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:medxpress/app/utils/constants/colors.dart';
-import 'package:medxpress/app/utils/constants/sizes.dart';
 import 'package:medxpress/app/utils/theme/customTheme/appbar_theme.dart';
 import 'package:medxpress/app/utils/theme/customTheme/bottom_navigation_theme.dart';
 import 'package:medxpress/app/utils/theme/customTheme/bottom_sheet_theme.dart';

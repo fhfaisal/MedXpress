@@ -1,15 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:medxpress/app/utils/constants/colors.dart';
-import 'package:medxpress/app/utils/constants/colors.dart';
-import 'package:medxpress/app/utils/constants/colors.dart';
-import 'package:medxpress/app/utils/constants/colors.dart';
-import 'package:medxpress/app/utils/constants/colors.dart';
-import 'package:medxpress/app/utils/constants/colors.dart';
-import 'package:medxpress/app/utils/constants/colors.dart';
-import 'package:medxpress/app/utils/constants/colors.dart';
-import 'package:medxpress/app/utils/constants/colors.dart';
-import 'package:medxpress/app/utils/constants/colors.dart';
-import 'package:medxpress/app/utils/constants/colors.dart';
 
 class AppTextTheme {
   AppTextTheme._();

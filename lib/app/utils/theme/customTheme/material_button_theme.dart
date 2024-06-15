@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:medxpress/app/utils/constants/colors.dart';
-import 'package:medxpress/app/utils/helpers/helper_function.dart';
 
 class AppOutlinedButtonTheme {
   AppOutlinedButtonTheme._(); //To avoid creating instances
@@ -12,5 +11,5 @@ class AppOutlinedButtonTheme {
   );
 
   ///DorkTheme
-  static final darkOutlinedButtonTheme = OutlinedButtonThemeData();
+  static final darkOutlinedButtonTheme = const OutlinedButtonThemeData();
 }

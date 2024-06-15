@@ -22,6 +22,8 @@ import '../modules/otpVerification/bindings/otp_verification_binding.dart';
 import '../modules/otpVerification/views/otp_verification_view.dart';
 import '../modules/prescription/bindings/prescription_binding.dart';
 import '../modules/prescription/views/prescription_view.dart';
+import '../modules/productDetails/bindings/product_details_binding.dart';
+import '../modules/productDetails/views/product_details_view.dart';
 import '../modules/signUp/bindings/sign_up_binding.dart';
 import '../modules/signUp/views/sign_up_view.dart';
 
@@ -99,6 +101,11 @@ class AppPages {
       name: _Paths.MY_ACCOUNT,
       page: () => const MyAccountView(),
       binding: MyAccountBinding(),
+    ),
+    GetPage(
+      name: _Paths.PRODUCT_DETAILS,
+      page: () => const ProductDetailsView(),
+      binding: ProductDetailsBinding(),
     ),
   ];
 }
