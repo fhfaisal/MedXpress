@@ -25,7 +25,8 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(AppSizes.defaultSpace, AppSizes.defaultSpace, AppSizes.defaultSpace, 0),
+        padding: const EdgeInsets.fromLTRB(AppSizes.defaultSpace,
+            AppSizes.defaultSpace, AppSizes.defaultSpace, 0),
         child: ListView(
           shrinkWrap: true,
           children: [
@@ -70,20 +71,20 @@ class HomeView extends GetView<HomeController> {
             ),
             ClipRRect(
               borderRadius: BorderRadius.circular(AppSizes.borderRadiusXXL),
-              child: Container(
+              child: SizedBox(
                   height: AppHelperFunction.screenHeight() * 0.15,
-                  decoration: BoxDecoration(
-                      color: AppColors.primary5,
-                      borderRadius: BorderRadius.circular(AppSizes.borderRadiusXXL),
-                      border: Border.all(color: Theme.of(context).primaryColor.withOpacity(0.5))),
                   child: CarouselSlider.builder(
                     scrollDirection: Axis.vertical,
                     enableAutoSlider: true,
                     unlimitedMode: true,
                     //controller: controller.sliderController,
-                    slideTransform:  const DefaultTransform(),
+                    slideTransform: const DefaultTransform(),
                     itemCount: featureBrands.length,
-                    slideBuilder: (index) => Image(image: const AssetImage(AppImageStrings.refer),fit: BoxFit.cover,width: AppHelperFunction.screenWidth(),),
+                    slideBuilder: (index) => Image(
+                      image: const AssetImage(AppImageStrings.refer),
+                      fit: BoxFit.cover,
+                      width: AppHelperFunction.screenWidth(),
+                    ),
                   )),
             )
           ],

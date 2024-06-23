@@ -9,6 +9,7 @@ import 'app/utils/constants/app_strings.dart';
 void main() {
   runApp(
     GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Application",
       themeMode: ThemeMode.system,
       theme: AppTheme.lightTheme,
